@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from "react";
 import { Share2, Grid, List, Search, X } from "lucide-react";
 import { ModeToggle } from "@/components/ModeTogle";
+import unitube from "@/assets/unitube.png";
+
 
 type Video = {
   id: string;
@@ -57,6 +59,9 @@ export default function Home() {
       <header className="rounded-xl ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 ">
           <div className="flex flex-col space-y-4 sm:flex-row sm:justify-between sm:items-center sm:space-y-0">
+            <div className="mb-2 dark:bg-transparent bg-blue-500 rounded-md mx-auto md:hidden">
+              <img src={unitube.src} alt="UniTube Logo" className="w-48 mt-1 ml-1" />
+            </div>
             <div className="flex space-x-4 items-center">
               <div className="relative flex-1 sm:flex-initial">
                 <input
