@@ -1,21 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+h1 {
+  font-family: 'Righteous', cursive;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  :root {
+    /* Cores base */
+    --background: 220 45% 98%;
+    --foreground: 225 60% 5%;
+    
+    /* Cartões e Popovers */
+    --card: 220 45% 98%;
+    --card-foreground: 225 60% 5%;
+    --popover: 220 45% 98%;
+    --popover-foreground: 225 60% 5%;
+    
+    /* Cores primárias - Um azul royal mais vibrante */
+    --primary: 225 85% 60%;
+    --primary-foreground: 220 45% 98%;
+    
+    /* Cores secundárias - Um cinza azulado suave */
+    --secondary: 220 25% 92%;
+    --secondary-foreground: 225 50% 15%;
+    
+    /* Elementos atenuados */
+    --muted: 220 25% 92%;
+    --muted-foreground: 220 20% 45%;
+    
+    /* Elementos de destaque */
+    --accent: 225 75% 95%;
+    --accent-foreground: 225 50% 15%;
+    
+    /* Elementos destrutivos - Vermelho mais sofisticado */
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 220 45% 98%;
+    
+    /* Bordas e inputs */
+    --border: 220 25% 90%;
+    --input: 220 25% 90%;
+    --ring: 225 85% 60%;
+    --radius: 0.75rem;
+    
+    /* Cores para gráficos - Paleta mais harmoniosa */
+    --chart-1: 225 85% 60%;  /* Azul royal */
+    --chart-2: 190 70% 50%;  /* Turquesa */
+    --chart-3: 150 65% 45%;  /* Verde esmeralda */
+    --chart-4: 35 85% 65%;   /* Dourado */
+    --chart-5: 315 70% 60%;  /* Roxo */
+
+    /* Barra lateral - Tons mais profundos */
+    --sidebar-background: 225 45% 25%;
+    --sidebar-foreground: 220 45% 98%;
+    --sidebar-primary: 225 85% 60%;
+    --sidebar-primary-foreground: 220 45% 98%;
+    --sidebar-accent: 225 40% 20%;
+    --sidebar-accent-foreground: 220 45% 95%;
+    --sidebar-border: 225 35% 30%;
+    --sidebar-ring: 225 85% 60%;
+}
+
+.dark {
+    /* Cores base - Fundo mais profundo */
+    --background: 225 50% 5%;
+    --foreground: 220 45% 98%;
+    
+    /* Cartões e Popovers */
+    --card: 225 50% 5%;
+    --card-foreground: 220 45% 98%;
+    --popover: 225 50% 5%;
+    --popover-foreground: 220 45% 98%;
+    
+    /* Cores primárias - Azul mais luminoso */
+    --primary: 225 85% 65%;
+    --primary-foreground: 225 50% 5%;
+    
+    /* Cores secundárias - Mais contraste */
+    --secondary: 225 30% 20%;
+    --secondary-foreground: 220 45% 98%;
+    
+    /* Elementos atenuados */
+    --muted: 225 30% 20%;
+    --muted-foreground: 220 25% 70%;
+    
+    /* Elementos de destaque */
+    --accent: 225 30% 20%;
+    --accent-foreground: 220 45% 98%;
+    
+    /* Elementos destrutivos - Vermelho mais suave */
+    --destructive: 0 65% 35%;
+    --destructive-foreground: 220 45% 98%;
+    
+    /* Bordas e inputs */
+    --border: 225 30% 20%;
+    --input: 225 30% 20%;
+    --ring: 225 85% 65%;
+    
+    /* Cores para gráficos - Mais vibrantes no modo escuro */
+    --chart-1: 225 85% 65%;  /* Azul brilhante */
+    --chart-2: 190 75% 55%;  /* Turquesa vibrante */
+    --chart-3: 150 70% 50%;  /* Verde vivo */
+    --chart-4: 35 90% 70%;   /* Dourado brilhante */
+    --chart-5: 315 75% 65%;  /* Roxo vibrante */
+
+    /* Barra lateral - Mais contraste */
+    --sidebar-background: 225 45% 8%;
+    --sidebar-foreground: 220 45% 98%;
+    --sidebar-primary: 225 85% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 225 40% 12%;
+    --sidebar-accent-foreground: 220 45% 98%;
+    --sidebar-border: 225 35% 15%;
+    --sidebar-ring: 225 85% 65%;
+}
+
 }
