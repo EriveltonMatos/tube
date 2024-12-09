@@ -8,7 +8,6 @@ import unitube from "@/assets/unitube.png";
 type Video = {
   id: string;
   title: string;
-  views: number;
   source: string; // YouTube embed link
 };
 
@@ -42,8 +41,17 @@ export default function Home() {
     {
       id: "1",
       title: "Abertura de Chamado: Impressoras - Secretaria",
-      views: 1234,
       source: "https://www.youtube.com/embed/q_ey0J6C65k?si=_9GR9Nnw0RCgtg34", // link do embed
+    },
+     {
+      id: "2",
+      title: "Impressoras: Página de Status - Secretaria",
+      source: "https://www.youtube.com/embed/N3lcsG7lVf0?si=yGN1On5b1SItlcqb", // link do embed
+    },
+    {
+      id: "3",
+      title: "Orientações Para o Atendimento Telefônico - Secretaria",
+      source: "https://www.youtube.com/embed/4CszoYhH-X8?si=8b0f4deRIpdSLb_z", // link do embed
     },
   ];
 
