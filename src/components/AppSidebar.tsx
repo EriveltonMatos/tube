@@ -21,6 +21,11 @@ const items = [
     url: "/",
     icon: Home,
   },
+  {
+    title: "Unipex - Secretaria",
+    url: "unipex-secretaria",
+    icon: Home,
+  },
 ];
 
 export function AppSidebar() {
