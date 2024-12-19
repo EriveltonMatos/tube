@@ -59,16 +59,21 @@ export default function Home() {
     },
     {
       id: "5",
+      title: "Calendário de Provas: Primeira Chamada - Secretaria",
+      source: "https://www.youtube.com/embed/07zgnJYMHwU?si=IltkctLfbQKx64Tk", // link do embed
+    },
+    {
+      id: "6",
       title: "Registro de Certificados - UNIPEX Secretaria",
       source: "https://www.youtube.com/embed/c19eqS4jBLE?si=KeQJVSQDQcbkNANy", // link do embed
     },
     {
-      id: "6",
+      id: "7",
       title: "CME - CHECK IN | CHECK OUT - PARTE 1 - UNIPEX Secretaria",
       source: "https://www.youtube.com/embed/k14SSY6e7X0?si=ws2rDYtUaCKvtaFZ", // link do embed
     },
     {
-      id: "7",
+      id: "8",
       title: "CME - CHECK IN | CHECK OUT - PARTE 2 - UNIPEX Secretaria",
       source: "https://www.youtube.com/embed/lr0_g3X3QDc?si=bprNOGe76Rwqh_VN", // link do embed
     },
