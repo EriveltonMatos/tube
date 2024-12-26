@@ -39,43 +39,53 @@ export default function Home() {
   const sampleVideos: Video[] = [
     {
       id: "1",
+      title: "Diretrizes Para Uma Boa Convivência - Parte 1 - Secretaria",
+      source: "https://www.youtube.com/embed/81z4ntLfmlU?si=E_TOQMbH3M2xgfS-", // link do embed
+    },
+    {
+      id: "2",
       title: "Abertura de Chamado: Impressoras - Secretaria",
       source: "https://www.youtube.com/embed/q_ey0J6C65k?si=_9GR9Nnw0RCgtg34", // link do embed
     },
      {
-      id: "2",
+      id: "3",
       title: "Impressoras: Página de Status - Secretaria",
       source: "https://www.youtube.com/embed/N3lcsG7lVf0?si=yGN1On5b1SItlcqb", // link do embed
     },
     {
-      id: "3",
+      id: "4",
       title: "Orientações Para o Atendimento Telefônico - Secretaria",
       source: "https://www.youtube.com/embed/4CszoYhH-X8?si=8b0f4deRIpdSLb_z", // link do embed
     },
     {
-      id: "4",
+      id: "5",
       title: "Acompanhando o E-mail institucional do curso - Secretaria",
       source: "https://www.youtube.com/embed/0L5Ac6KszhA?si=UkW-rtiu43eFTo-d", // link do embed
     },
     {
-      id: "5",
+      id: "6",
       title: "Calendário de Provas: Primeira Chamada - Secretaria",
       source: "https://www.youtube.com/embed/07zgnJYMHwU?si=IltkctLfbQKx64Tk", // link do embed
     },
     {
-      id: "6",
+      id: "7",
       title: "Registro de Certificados - UNIPEX Secretaria",
       source: "https://www.youtube.com/embed/c19eqS4jBLE?si=KeQJVSQDQcbkNANy", // link do embed
     },
     {
-      id: "7",
+      id: "8",
       title: "CME - CHECK IN | CHECK OUT - PARTE 1 - UNIPEX Secretaria",
       source: "https://www.youtube.com/embed/k14SSY6e7X0?si=ws2rDYtUaCKvtaFZ", // link do embed
     },
     {
-      id: "8",
+      id: "9",
       title: "CME - CHECK IN | CHECK OUT - PARTE 2 - UNIPEX Secretaria",
       source: "https://www.youtube.com/embed/lr0_g3X3QDc?si=bprNOGe76Rwqh_VN", // link do embed
+    },
+    {
+      id: "10",
+      title: "Registro de Declarações - Unipex Secretaria",
+      source: "https://www.youtube.com/embed/kL_7Hka0Ccg?si=Ndq3qZNILnHlO180", // link do embed
     },
   ];
 
@@ -177,7 +187,7 @@ export default function Home() {
               className={`text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 ${
                 isSharing ? "animate-pulse" : ""
               } focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-full p-2`}
-              title="Share video"
+              title="Compartilhar Vídeo"
             >
               <Share2 className={`w-5 h-5 ${isSharing ? "animate-spin" : ""}`} />
             </button>
@@ -210,7 +220,7 @@ export default function Home() {
               className={`text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 ${
                 isSharing ? "animate-pulse" : ""
               } focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-full p-2`}
-              title="Share video"
+              title="Compartilhar Vídeo"
             >
               <Share2 className={`w-5 h-5 ${isSharing ? "animate-spin" : ""}`} />
             </button>

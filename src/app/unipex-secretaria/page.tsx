@@ -44,11 +44,16 @@ export default function UnipexSecretaria() {
     },
     {
       id: "2",
+      title: "Registro de Declarações - Unipex Secretaria",
+      source: "https://www.youtube.com/embed/kL_7Hka0Ccg?si=Ndq3qZNILnHlO180", // link do embed
+    },
+    {
+      id: "3",
       title: "CME - CHECK IN | CHECK OUT - PARTE 1 - UNIPEX Secretaria",
       source: "https://www.youtube.com/embed/k14SSY6e7X0?si=ws2rDYtUaCKvtaFZ", // link do embed
     },
     {
-      id: "3",
+      id: "4",
       title: "CME - CHECK IN | CHECK OUT - PARTE 2 - UNIPEX Secretaria",
       source: "https://www.youtube.com/embed/lr0_g3X3QDc?si=bprNOGe76Rwqh_VN", // link do embed
     },
@@ -152,7 +157,7 @@ export default function UnipexSecretaria() {
               className={`text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 ${
                 isSharing ? "animate-pulse" : ""
               } focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-full p-2`}
-              title="Share video"
+              title="Compartilhar Vídeo"
             >
               <Share2 className={`w-5 h-5 ${isSharing ? "animate-spin" : ""}`} />
             </button>
@@ -185,7 +190,7 @@ export default function UnipexSecretaria() {
               className={`text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 ${
                 isSharing ? "animate-pulse" : ""
               } focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-full p-2`}
-              title="Share video"
+              title="Compartilhar Vídeo"
             >
               <Share2 className={`w-5 h-5 ${isSharing ? "animate-spin" : ""}`} />
             </button>
