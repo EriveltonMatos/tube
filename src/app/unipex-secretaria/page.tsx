@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Share2, Grid, List, Search, X } from "lucide-react";
 import { ModeToggle } from "@/components/ModeTogle";
 import unitube from "@/assets/unitube.png";
+import ProfileViewer from "@/components/ProfileViewer";
 
 type Video = {
   id: string;
@@ -72,7 +73,11 @@ export default function UnipexSecretaria() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 ">
           <div className="flex flex-col space-y-4 sm:flex-row sm:justify-between sm:items-center sm:space-y-0">
             <div className="mb-2 dark:bg-transparent bg-blue-500 rounded-md mx-auto md:hidden">
-              <img src={unitube.src} alt="UniTube Logo" className="w-48 mt-1 ml-1" />
+              <img
+                src={unitube.src}
+                alt="UniTube Logo"
+                className="w-48 mt-1 ml-1"
+              />
             </div>
             <div className="flex space-x-4 items-center">
               <div className="relative flex-1 sm:flex-initial">
@@ -97,29 +102,34 @@ export default function UnipexSecretaria() {
                 )}
               </div>
             </div>
-            <div className="flex space-x-2">
-              <button
-                onClick={() => setViewMode("grid")}
-                className={`p-2 rounded-lg ${
-                  viewMode === "grid"
-                    ? "bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300"
-                    : "text-gray-600 dark:text-gray-400"
-                }`}
-              >
-                <Grid size={25} />
-              </button>
-              <button
-                onClick={() => setViewMode("list")}
-                className={`p-2 rounded-lg ${
-                  viewMode === "list"
-                    ? "bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300"
-                    : "text-gray-600 dark:text-gray-400"
-                }`}
-              >
-                <List size={25} />
-              </button>
-              <div className="flex justify-center items mt-1">
-                <ModeToggle />
+            <div className="md:flex md:items-center md:space-x-4 space-y-2 md:space-y-0">
+              <div className="flex space-x-2 md:justify-end md:w-full">
+                <button
+                  onClick={() => setViewMode("grid")}
+                  className={`p-2 rounded-lg ${
+                    viewMode === "grid"
+                      ? "bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300"
+                      : "text-gray-600 dark:text-gray-400"
+                  }`}
+                >
+                  <Grid size={25} />
+                </button>
+                <button
+                  onClick={() => setViewMode("list")}
+                  className={`p-2 rounded-lg ${
+                    viewMode === "list"
+                      ? "bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300"
+                      : "text-gray-600 dark:text-gray-400"
+                  }`}
+                >
+                  <List size={25} />
+                </button>
+                <div className="flex justify-center items mt-1">
+                  <ModeToggle />
+                </div>
+              </div>
+              <div className="">
+                <ProfileViewer />
               </div>
             </div>
           </div>
@@ -127,79 +137,86 @@ export default function UnipexSecretaria() {
       </header>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-  <h1 className="text-5xl font-semibold dark:text-white text-blue-500">UNIPEX - SECRETARIA</h1>
-  <p className="text-sm text-slate-400 mb-10 mt-2">
-    Tutoriais rápidos e práticos para dominar o sistema UNIPEX - SECRETARIA
-  </p>
+        <h1 className="text-5xl font-semibold dark:text-white text-blue-500">
+          UNIPEX - SECRETARIA
+        </h1>
+        <p className="text-sm text-slate-400 mb-10 mt-2">
+          Tutoriais rápidos e práticos para dominar o sistema UNIPEX -
+          SECRETARIA
+        </p>
 
-  {viewMode === "grid" ? (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-      {filteredVideos.map((video) => (
-        <div
-          key={video.id}
-          className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden border"
-        >
-          <iframe
-            src={video.source}
-            title={video.title}
-            className="w-full"
-            style={{ aspectRatio: "16/9" }}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-          <div className="p-4">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-              {video.title}
-            </h3>
-            <button
-              onClick={() => handleShare(video)}
-              disabled={isSharing}
-              className={`text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 ${
-                isSharing ? "animate-pulse" : ""
-              } focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-full p-2`}
-              title="Compartilhar Vídeo"
-            >
-              <Share2 className={`w-5 h-5 ${isSharing ? "animate-spin" : ""}`} />
-            </button>
+        {viewMode === "grid" ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+            {filteredVideos.map((video) => (
+              <div
+                key={video.id}
+                className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden border"
+              >
+                <iframe
+                  src={video.source}
+                  title={video.title}
+                  className="w-full"
+                  style={{ aspectRatio: "16/9" }}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                    {video.title}
+                  </h3>
+                  <button
+                    onClick={() => handleShare(video)}
+                    disabled={isSharing}
+                    className={`text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 ${
+                      isSharing ? "animate-pulse" : ""
+                    } focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-full p-2`}
+                    title="Compartilhar Vídeo"
+                  >
+                    <Share2
+                      className={`w-5 h-5 ${isSharing ? "animate-spin" : ""}`}
+                    />
+                  </button>
+                </div>
+              </div>
+            ))}
           </div>
-        </div>
-      ))}
-    </div>
-  ) : (
-    <div className="flex flex-col space-y-4 mt-6">
-      {filteredVideos.map((video) => (
-        <div
-          key={video.id}
-          className="flex flex-col sm:flex-col bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden border"
-        >
-          <iframe
-            src={video.source}
-            title={video.title}
-            className="w-full sm:w-full"
-            style={{ aspectRatio: "16/9" }}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-          <div className="p-4 flex-1">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-              {video.title}
-            </h3>
-            <button
-              onClick={() => handleShare(video)}
-              disabled={isSharing}
-              className={`text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 ${
-                isSharing ? "animate-pulse" : ""
-              } focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-full p-2`}
-              title="Compartilhar Vídeo"
-            >
-              <Share2 className={`w-5 h-5 ${isSharing ? "animate-spin" : ""}`} />
-            </button>
+        ) : (
+          <div className="flex flex-col space-y-4 mt-6">
+            {filteredVideos.map((video) => (
+              <div
+                key={video.id}
+                className="flex flex-col sm:flex-col bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden border"
+              >
+                <iframe
+                  src={video.source}
+                  title={video.title}
+                  className="w-full sm:w-full"
+                  style={{ aspectRatio: "16/9" }}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+                <div className="p-4 flex-1">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                    {video.title}
+                  </h3>
+                  <button
+                    onClick={() => handleShare(video)}
+                    disabled={isSharing}
+                    className={`text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 ${
+                      isSharing ? "animate-pulse" : ""
+                    } focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-full p-2`}
+                    title="Compartilhar Vídeo"
+                  >
+                    <Share2
+                      className={`w-5 h-5 ${isSharing ? "animate-spin" : ""}`}
+                    />
+                  </button>
+                </div>
+              </div>
+            ))}
           </div>
-        </div>
-      ))}
-    </div>
-  )}
-</main>
+        )}
+      </main>
     </div>
   );
 }
