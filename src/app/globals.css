@@ -12,6 +12,10 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+.profile {
+  font-family: 'Righteous', cursive;
+}
+
 @layer base {
   * {
     @apply border-border;

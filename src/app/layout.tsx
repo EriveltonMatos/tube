@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next";
 import "./globals.css";
 import {
@@ -8,6 +7,7 @@ import {
 } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/AppSidebar";
 import { ThemeProvider } from "@/components/theme-provider";
+import AuthProvider from "@/components/providers";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
+        <AuthProvider>
           <SidebarProvider>
             <ThemeProvider
               attribute="class"
@@ -31,13 +32,14 @@ export default function RootLayout({
             >
               <AppSidebar />
               <SidebarInset>
-                <main className="w-full rounded-xl ">
+                <main className="w-full rounded-xl">
                   <SidebarTrigger />
                   {children}
                 </main>
               </SidebarInset>
             </ThemeProvider>
           </SidebarProvider>
+        </AuthProvider>
       </body>
     </html>
   );
